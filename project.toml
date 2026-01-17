@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nanojit"
+version = "0.1.0"
+description = "A faithful, minimal implementation of JiT for Diffusion (Li et al., 2026)"
+dependencies = [
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+    "einops",
+    "tqdm",
+    "numpy",
+    "wandb"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
